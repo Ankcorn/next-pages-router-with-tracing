@@ -6,7 +6,7 @@ import styles from '@/styles/Home.module.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export async function getServerSideProps(e: any) {
-  console.log(e)
+  console.log(JSON.stringify(e))
   return {
     props: {
       message: "Hello World"
