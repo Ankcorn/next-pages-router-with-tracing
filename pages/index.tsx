@@ -5,6 +5,14 @@ import styles from '@/styles/Home.module.css'
 
 const inter = Inter({ subsets: ['latin'] })
 
+export async function getServerSideProps(e: any) {
+  console.log(e)
+  return {
+    props: {
+      message: "Hello World"
+    }
+  }
+}
 export default function Home() {
   return (
     <>
