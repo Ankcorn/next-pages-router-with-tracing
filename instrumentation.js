@@ -9,7 +9,15 @@ export async function register() {
             plugins: [
               // Add the Vercel plugin to enable correlation between your logs and traces for projects deployed on Vercel
               new VercelPlugin()
-            ]
+            ],
+            startIncomingSpanHook: (span, req) => {
+              console.log('we are here')
+              console.log(req)
+              return {
+                message: 'hi yall'
+              }
+             }
+
           }),
         ]
       });
